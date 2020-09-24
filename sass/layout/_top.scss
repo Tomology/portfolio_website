@@ -1,0 +1,66 @@
+#top {
+  height: 100vh;
+  padding: 1rem;
+
+  // Background
+  background-color: $color-white;
+  background-image: url(/assets/backgrounds/overlay.png),
+    linear-gradient(60deg, rgba($accent1, 0.5) 5%, rgba($accent2, 0.35)),
+    url(/assets/backgrounds/pixel.gif);
+  background-repeat: repeat, no-repeat, no-repeat;
+  background-size: 100px 100px, cover, cover;
+  background-position: top left, center center, bottom center;
+  background-attachment: fixed, fixed, fixed;
+
+  // Positioning
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .card {
+    border-radius: $border-radius;
+    background-color: $color-white;
+    max-height: 80%;
+    min-width: 15.5rem;
+    padding: 4.5rem 2rem;
+    opacity: 0.95;
+    text-align: center;
+
+    // Positioning Test
+    display: flex;
+    flex-direction: column;
+
+    header {
+      .avatar {
+        position: relative;
+        display: block;
+        margin-bottom: 1.5rem;
+
+        img {
+          display: block;
+          margin: 0 auto;
+          border-radius: 100%;
+          box-shadow: 0 0 0 1.5rem $color-white;
+        }
+
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          background: $color-border;
+          height: $border-width;
+          width: calc(100% + 4rem);
+          left: -2rem;
+          top: 50%;
+          z-index: -1;
+        }
+      }
+
+      p {
+        margin-top: 1rem;
+        font-size: 1.25rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

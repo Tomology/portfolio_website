@@ -1,0 +1,13 @@
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  background-color: orangered;
+
+  .right_arrow {
+    position: absolute;
+    right: 0;
+    z-index: 10000;
+    font-size: 2rem;
+  }
+}

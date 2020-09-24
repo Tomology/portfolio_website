@@ -1,0 +1,15 @@
+@import "libs/vars";
+@import "libs/mixins";
+
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
+@import "../dist/css/fontawesome.min.css";
+
+@import "base/reset";
+@import "base/typography";
+@import "base/wrapper";
+
+@import "components/buttons";
+@import "components/icon";
+@import "components/icons";
+
+@import "layout/top";

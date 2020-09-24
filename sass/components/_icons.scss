@@ -1,0 +1,58 @@
+.icons {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+  margin: 1rem 0;
+
+  li {
+    a {
+      display: block;
+      text-decoration: none;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 100%;
+      border: solid $border-width $color-border;
+      line-height: 4rem;
+
+      &:before {
+        display: block;
+        width: inherit;
+        height: inherit;
+        line-height: inherit;
+        font-size: 1.85rem;
+        font-family: "Font Awesome 5 Free";
+        color: $color-white;
+        text-shadow: $icon-size 0px 0px $color-border,
+          ($icon-size * -1) 0px 0px $color-border,
+          0px $icon-size 0px $color-border,
+          0px ($icon-size * -1) 0px $color-border;
+        font-weight: 400;
+        text-transform: none !important;
+      }
+
+      &:hover {
+        border-color: $highlight;
+
+        &:before {
+          text-shadow: $icon-size 0px 0px $highlight,
+            ($icon-size * -1) 0px 0px $highlight, 0px $icon-size 0px $highlight,
+            0px ($icon-size * -1) 0px $highlight;
+        }
+      }
+    }
+  }
+}
+
+.github {
+  @include tooltip("GitHub", 4rem, -50%, 0.5rem);
+}
+
+.email {
+  @include tooltip("Contact", 4rem, -50%, 0.5rem);
+}
+
+.resume {
+  @include tooltip("Resume", 4rem, -50%, 0.5rem);
+}
