@@ -1,0 +1,285 @@
+#projects {
+  height: min-content;
+  padding: 2rem 0.5rem 5rem 0.5rem;
+  width: 100%;
+  // background-image: url(/assets/backgrounds/overlay.png),
+  //   linear-gradient(
+  //     to right bottom,
+  //     rgba($accent1, 0.85) 5%,
+  //     rgba($accent3, 0.85)
+  //   ),
+  //   url(/assets/backgrounds/bg.jpg);
+  background-color: #535c65;
+  background-repeat: repeat, no-repeat, no-repeat;
+  background-size: 100px 100px, cover, cover;
+  background-position: top left, center center, bottom center;
+  background-attachment: fixed, fixed, fixed;
+  text-align: center;
+
+  @include respond(phone-large) {
+    padding: 2rem 0.5rem 0rem 0.5rem;
+  }
+
+  h2 {
+    color: $color-grey-light;
+    margin: 1rem 0 2.5rem 0;
+  }
+
+  .project_container {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    @include respond(laptop-small) {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  .project {
+    perspective: 100rem;
+    -moz-perspective: 100rem;
+    position: relative;
+    height: 35rem;
+    width: 24rem;
+
+    @include respond(laptop-medium) {
+      height: 31rem;
+      width: 20rem;
+    }
+
+    @include respond(laptop-small) {
+      height: 31rem;
+      width: 16.5rem;
+      margin: 1rem;
+    }
+
+    @include respond(phone-large) {
+      margin: 1rem 0rem;
+    }
+
+    &__side {
+      height: inherit;
+      width: inherit;
+      top: 0;
+      left: 0;
+      position: absolute;
+      backface-visibility: hidden;
+      transition: all 0.8s ease;
+      border-radius: $border-radius;
+      overflow: hidden;
+      box-shadow: 0 1.5rem 4rem rgba(black, 0.15);
+
+      &--front {
+        background-color: $color-white;
+
+        &--construction {
+          background-color: #ff6883;
+          position: relative;
+        }
+      }
+
+      &--back {
+        transform: rotateY(180deg);
+        padding: 1rem 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .btn {
+          margin-top: 4rem;
+        }
+
+        &-1 {
+          background-image: linear-gradient(
+            to right bottom,
+            $pink-gradient-light,
+            $pink-gradient-dark
+          );
+        }
+
+        &-2 {
+          background-image: linear-gradient(
+            to right bottom,
+            $blue-gradient-light,
+            $blue-gradient-dark
+          );
+        }
+
+        &-3 {
+          background-color: #ff6883;
+        }
+      }
+    }
+
+    &:hover .project__side--front {
+      transform: rotateY(-180deg);
+    }
+
+    &:hover .project__side--back {
+      transform: rotateY(0deg);
+    }
+
+    &__picture {
+      background-size: cover;
+      height: 15rem;
+
+      &--1 {
+        // background-image: linear-gradient(
+        //   to right bottom,
+        //   rgba(#885c5d, 0.65),
+        //   rgba(#50575d, 0.65)
+        // );
+        background-color: $highlight;
+
+        &::before {
+          content: "";
+          position: absolute;
+          background-size: cover;
+          background-image: linear-gradient(
+              to right bottom,
+              rgba($color-grey-light, 0.3),
+              rgba($color-grey-dark, 0.3)
+            ),
+            url(/assets/images/cimex.jpg);
+          top: 0.2rem;
+          left: 0.2rem;
+          height: 14.6rem;
+          width: 23.6rem;
+
+          @include respond(laptop-medium) {
+            width: 19.6rem;
+          }
+
+          @include respond(laptop-small) {
+            width: 16.1rem;
+          }
+        }
+      }
+
+      &--2 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($color-grey-light, 0.65),
+          rgba($color-grey-dark, 0.65)
+        );
+
+        &::before {
+          content: "";
+          position: absolute;
+          background-size: cover;
+          background-image: linear-gradient(
+              to right bottom,
+              rgba($color-grey-light, 0.3),
+              rgba($color-grey-dark, 0.3)
+            ),
+            url(/assets/images/abn.jpg);
+          top: 0.2rem;
+          left: 0.2rem;
+          height: 14.6rem;
+          width: 23.6rem;
+
+          @include respond(laptop-medium) {
+            width: 19.6rem;
+          }
+
+          @include respond(laptop-small) {
+            width: 16.1rem;
+          }
+        }
+      }
+
+      &--3 {
+        background-image: url(/assets/gifs/construction.gif);
+        transform: translateY(40%);
+        height: 20rem;
+      }
+    }
+
+    &__heading {
+      font-size: 2rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      text-align: center;
+      color: $color-white;
+      position: absolute;
+      margin: 0 auto;
+      transform: translateX(20%);
+      top: 5rem;
+      width: 75%;
+
+      &-span {
+        padding: 0rem 0.5rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+
+        &--1 {
+          background-image: linear-gradient(
+            to right bottom,
+            rgba($accent1, 1),
+            rgba($highlight, 1)
+          );
+        }
+
+        &--2 {
+          background-image: linear-gradient(
+            to right bottom,
+            rgba($color-grey-light, 0.85),
+            rgba($color-grey-dark, 0.85)
+          );
+        }
+
+        &--3 {
+          background-image: linear-gradient(
+            to right bottom,
+            rgba($color-grey-light, 0.85),
+            rgba($color-grey-dark, 0.85)
+          );
+        }
+      }
+    }
+
+    &__technologies {
+      padding: 2.5rem;
+
+      ul {
+        list-style: none;
+        width: 80%;
+        margin: 0 auto;
+
+        li {
+          text-align: center;
+          text-transform: uppercase;
+          font-size: 1rem;
+          padding: 1rem;
+          color: $fg-light;
+
+          &:not(:last-child) {
+            border-bottom: $border-width solid $color-grey-light;
+          }
+
+          @include respond(laptop-medium) {
+            font-size: 0.9rem;
+            padding: 0.65rem;
+          }
+        }
+      }
+    }
+
+    &__summary {
+      text-transform: uppercase;
+      font-size: 2rem;
+
+      p {
+        color: $color-white;
+
+        @include respond(laptop-medium) {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}

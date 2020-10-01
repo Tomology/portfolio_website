@@ -10,7 +10,19 @@ h1 {
   color: $fg-light;
 }
 
+h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: $letter-spacing;
+}
+
+h3 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: $letter-spacing;
+}
+
 p {
   color: $fg-light;
-  letter-spacing: $letter-spacing;
 }

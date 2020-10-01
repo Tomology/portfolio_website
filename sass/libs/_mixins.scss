@@ -1,21 +1,3 @@
-//   .github {
-//     &:hover {
-//       &::after {
-//         position: absolute;
-//         font-size: 0.9rem;
-//         transform: translateX(-50%);
-//         content: "GitHub";
-//         width: 4rem;
-//         border-radius: $border-radius;
-//         background-color: $fg-light;
-//         color: $color-white;
-//         padding: 5px 1px;
-//         margin-top: 0.5rem;
-//         z-index: 100;
-//       }
-//     }
-//   }
-
 @mixin tooltip(
   $content,
   $width,
@@ -29,7 +11,6 @@
         transform: scale(1.1);
       }
     }
-
     &::after {
       position: absolute;
       font-size: 0.9rem;

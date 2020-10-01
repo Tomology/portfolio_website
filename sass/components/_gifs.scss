@@ -1,0 +1,82 @@
+.gif {
+  border: $border-width solid $color-border;
+  height: 19rem;
+  width: 100%;
+  background-attachment: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include respond(phone-large) {
+    background-attachment: local;
+    background-size: contain;
+  }
+
+  &-abn {
+    &--1 {
+      grid-column: 1 / 2;
+      background-image: url(../../assets/gifs/abn_gif1.gif);
+    }
+
+    &--2 {
+      grid-column: 2 / 3;
+      background-image: url(../../assets/gifs/abn_gif2.gif);
+      transform: translateX(-1px);
+
+      @include respond(laptop-small) {
+        grid-column: 1 / 2;
+      }
+
+      @include respond(phone-large) {
+        display: none;
+      }
+    }
+
+    &--3 {
+      grid-column: 1 / 2;
+      background-image: url(../../assets/gifs/abn_gif3.gif);
+      background-position: center top;
+      @include respond(tab-port) {
+        background-position: left top;
+      }
+
+      @include respond(phone-large) {
+        display: none;
+      }
+    }
+  }
+
+  &-cimex {
+    &--1 {
+      grid-column: 1 / 2;
+      background-image: url(../../assets/gifs/cimex_gif1.gif);
+      background-position: center right;
+
+      @include respond(phone-large) {
+        background-attachment: local;
+        background-size: cover;
+      }
+    }
+
+    &--2 {
+      grid-column: 2 / 3;
+      background-image: url(../../assets/gifs/cimex_gif2.gif);
+
+      @include respond(laptop-small) {
+        grid-column: 1 / 2;
+      }
+
+      @include respond(phone-large) {
+        display: none;
+      }
+    }
+
+    &--3 {
+      grid-column: 1 / 2;
+      background-image: url(../../assets/gifs/cimex_gif3.gif);
+
+      @include respond(phone-large) {
+        display: none;
+      }
+    }
+  }
+}

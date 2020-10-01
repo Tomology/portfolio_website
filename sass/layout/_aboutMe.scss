@@ -1,0 +1,96 @@
+#aboutMe {
+  height: min-content;
+  width: 100%;
+  background-color: $color-grey-light;
+  padding: 2rem 10rem 3rem 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include respond(laptop-small) {
+    padding: 2rem 3rem 3rem 3rem;
+  }
+
+  @include respond(phone-large) {
+    padding: 2rem 0.5rem 3rem 0.5rem;
+  }
+
+  .heading {
+    width: 100%;
+    padding: 1rem 0 2rem 0;
+    color: transparent;
+    background-image: url(/assets/backgrounds/overlay.png),
+      linear-gradient(to right, $accent1, $accent3),
+      url(/assets/backgrounds/bg.jpg);
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+    letter-spacing: $letter-spacing;
+  }
+
+  .subheading {
+    width: 100%;
+    padding: 2rem 0 1rem 0;
+    color: transparent;
+    background-image: url(/assets/backgrounds/overlay.png),
+      linear-gradient(to top left, $accent1, $accent3),
+      url(/assets/backgrounds/bg.jpg);
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-align: center;
+  }
+
+  .technologies {
+    max-width: 100%;
+    overflow: hidden;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      height: 5rem;
+      width: 5rem;
+
+      img {
+        height: inherit;
+        width: inherit;
+        padding: 1rem;
+        transition: all 0.2s;
+      }
+    }
+
+    .html5 {
+      @include tooltip("HTML5", 4rem, -110%, 4.5rem, true);
+    }
+    .css3 {
+      @include tooltip("CSS3", 4rem, -110%, 4.5rem, true);
+    }
+    .javascript {
+      @include tooltip("JavaScript", 4.7rem, -110%, 4.5rem, true);
+    }
+    .react {
+      @include tooltip("React", 4rem, -110%, 4.5rem, true);
+    }
+    .redux {
+      @include tooltip("Redux", 4rem, -110%, 4.5rem, true);
+    }
+    .nodejs {
+      @include tooltip("NodeJS | Express", 7rem, -90%, 4.5rem, true);
+    }
+    .python {
+      @include tooltip("Python", 4rem, -110%, 4.5rem, true);
+    }
+    .django {
+      @include tooltip("Django", 4rem, -110%, 4.5rem, true);
+    }
+    .mongodb {
+      @include tooltip("MongoDB", 4rem, -110%, 4.5rem, true);
+    }
+    .sass {
+      @include tooltip("Sass", 4rem, -110%, 4.5rem, true);
+    }
+  }
+}

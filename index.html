@@ -8,10 +8,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="#top" class="flicker">Top</a></li>
+            <li><a href="#aboutMe" class="flicker">About Me</a></li>
+            <li><a href="#projects" class="flicker">Projects</a></li>
+        </ul>
+    </nav>
     <main id="wrapper">
         <div class="right_arrow">&#x2192;</div>
         <section id="top">
-            <div class="card">
+            <div class="card" id="card">
                 <header>
                     <span class="avatar"><img src="/assets/images/avatar.jpg" alt="avatar" /></span>
                     <h1>Thomas Sobor</h1>
@@ -26,8 +33,92 @@
                 </footer>
             </div>
         </section>
-        <section id="aboutMe"></section>
-        <section id="projects"></section>
+        <section id="aboutMe">
+            <h2 class="heading">About Me</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias labore blanditiis, sint ut, laborum repellat maiores veniam adipisci, sed atque nesciunt corporis! Vero odit cupiditate et odio veniam, nam omnis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, deleniti placeat, voluptas eos eaque rerum facilis illo voluptatem, praesentium earum dolorum architecto error delectus libero. Suscipit voluptates vel nobis quae.</p>
+            <h3 class="subheading">Technology Skills</h3> 
+            <ul class="technologies">
+                    <li class="html5"><img src="assets/svg/html5.svg" alt="html5"></li>
+                    <li class="css3"><img src="assets/svg/css3.svg" alt="css3"></li>
+                    <li class="javascript"><img src="assets/svg/javascript-4.svg" alt="javascript"></li>
+                    <li class="react"><img src="assets/svg/react.svg" alt="react"></li>
+                    <li class="redux"><img src="assets/svg/redux.svg" alt="redux"></li>
+                    <li class="nodejs"><img src="assets/svg/nodejs.svg" alt="nodejs"></li>
+                    <li class="python"><img src="assets/svg/python.svg" alt="python"></li>
+                    <li class="django"><img src="assets/svg/django.svg" alt="django"></li>
+                    <li class="mongodb"><img src="assets/svg/mongodb.svg" alt="mongodb"></li>
+                    <li class="sass"><img src="assets/svg/sass.svg" alt="sass"></li>
+            </ul>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+
+        <div class="project_container">
+            <div class="project">
+                <div class="project__side project__side--front">
+                    <div class="project__picture project__picture--1">
+                        &nbsp;
+                    </div>
+                    <h4 class="project__heading">
+                        <span class="project__heading-span project__heading-span--1">Cimex: Bug Tracker</span>
+                    </h4>
+                    <div class="project__technologies">
+                        <ul>
+                            <li>React</li>
+                            <li>Redux</li>
+                            <li>Node.js / Express</li>
+                            <li>MongoDB</li>
+                            <li>SASS</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project__side project__side--back project__side--back-1">
+                    <div class="project__summary">
+                        <p>A bug tracker for tracking issues and managing projects built using the MERN stack.</p>
+                    </div>
+                    <a href="#" class="btn btn--white">more info</a>
+                </div>
+            </div>
+            <div class="project"> <div class="project__side project__side--front">
+                <div class="project__picture project__picture--2">
+                    &nbsp;
+                </div>
+                <h4 class="project__heading">
+                    <span class="project__heading-span project__heading-span--2">ABN Validator</span>
+                </h4>
+                <div class="project__technologies">
+                    <ul>
+                        <li>Python</li>
+                        <li>Django</li>
+                        <li>Bootstrap</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="project__side project__side--back project__side--back-2">
+                <div class="project__summary">
+                    <p>An app that analyses a spreadsheet for valid Australian Business Numbers (ABNs).</p>
+                </div>
+                <a href="#" class="btn btn--white">more info</a>
+            </div></div>
+            <div class="project"> <div class="project__side project__side--front project__side--front--construction">
+                <div class="project__picture project__picture--3">
+                    &nbsp;
+                </div>
+                <span class="project__heading-span project__heading-span--3">Under Construction</span>
+            </div>
+            <div class="project__side project__side--back project__side--back-3">
+                <div class="project__summary">
+                    <p>Coming Soon</p>
+                </div>
+            </div></div>
+        </div>
+        </section>
     </main>
+    <script>
+        window.onload = function() {
+            let element = document.getElementById("card");
+            element.className += " loaded";
+        }
+    </script>
 </body>
 </html>

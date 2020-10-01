@@ -1,5 +1,5 @@
 #top {
-  height: 100vh;
+  min-height: 100vh;
   padding: 1rem;
 
   // Background
@@ -17,18 +17,28 @@
   align-items: center;
   justify-content: center;
 
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+
   .card {
+    // transition: all 0.5s;
+    // -webkit-transform: perspective(100px) rotateX(15deg);
+    // -moz-transform: perspective(1000px) rotateX(15deg);
+    // transform: perspective(1000px) rotateX(15deg);
+    opacity: 0;
     border-radius: $border-radius;
     background-color: $color-white;
-    max-height: 80%;
+    min-height: min-content;
     min-width: 15.5rem;
-    padding: 4.5rem 2rem;
+    padding: 4.5rem 4rem;
     opacity: 0.95;
     text-align: center;
-
-    // Positioning Test
     display: flex;
     flex-direction: column;
+
+    @include respond(phone-large) {
+      padding: 3.5rem 1rem;
+    }
 
     header {
       .avatar {
@@ -49,18 +59,30 @@
           position: absolute;
           background: $color-border;
           height: $border-width;
-          width: calc(100% + 4rem);
-          left: -2rem;
+          width: calc(100% + 8rem);
+          left: -4rem;
           top: 50%;
           z-index: -1;
+
+          @include respond(phone-large) {
+            width: calc(100% + 2rem);
+            left: -1rem;
+          }
         }
       }
 
       p {
-        margin-top: 1rem;
+        margin: 1rem 0;
         font-size: 1.25rem;
         text-transform: uppercase;
       }
     }
+  }
+
+  .card .loaded {
+    opacity: 1;
+    // -webkit-transform: perspective(0px) rotateX(0deg);
+    // -moz-transform: perspective(0px) rotateX(0deg);
+    // transform: perspective(0px) rotateX(0deg);
   }
 }

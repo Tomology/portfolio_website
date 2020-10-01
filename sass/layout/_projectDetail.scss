@@ -1,0 +1,216 @@
+.projectDetail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: dense;
+  width: 80%;
+  align-self: center;
+  color: $color-grey-text;
+  margin-bottom: 3rem;
+
+  @include respond(laptop-small) {
+    grid-template-columns: 1fr;
+  }
+
+  @include respond(phone-large) {
+    width: 90%;
+  }
+
+  .projectHeader {
+    font-size: 1.2rem;
+    grid-column: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+    margin-top: 1rem;
+    text-align: center;
+    border-top: $border-width solid $color-border;
+    border-bottom: $border-width solid $color-border;
+    position: relative;
+
+    @include respond(laptop-small) {
+      grid-column: 1 / 2;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: $border-width;
+      top: 0.5rem;
+      background-color: $color-border;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: $border-width;
+      background-color: $color-border;
+      bottom: 0.5rem;
+    }
+
+    .title {
+      text-transform: uppercase;
+      font-size: 2rem;
+      font-weight: 700;
+      color: $color-grey-text;
+      margin-bottom: 2rem;
+    }
+
+    span {
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    .demo_details {
+      display: flex;
+      justify-content: space-between;
+      width: 50%;
+      margin: 0 auto;
+
+      @include respond(tab-land) {
+        width: 100%;
+      }
+
+      a,
+      a:visited {
+        color: $fg-light;
+        font-size: 1rem;
+        text-decoration: none;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        img {
+          height: 1.75rem;
+          margin-right: 1rem;
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .technologies {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .react {
+        @include tooltip("React", 4rem, -110%, 3rem, true);
+      }
+
+      .redux {
+        @include tooltip("Redux", 4rem, -110%, 3rem, true);
+      }
+
+      .nodejs {
+        @include tooltip("NodeJS | Express", 7rem, -80%, 3rem, true);
+      }
+
+      .sass {
+        @include tooltip("Sass", 4rem, -110%, 3rem, true);
+      }
+
+      .mongodb {
+        @include tooltip("MongoDB", 4rem, -110%, 3rem, true);
+      }
+
+      .javascript {
+        @include tooltip("JavaScript", 5rem, -90%, 3rem, true);
+      }
+
+      .python {
+        @include tooltip("Python", 4rem, -110%, 3rem, true);
+      }
+
+      .django {
+        @include tooltip("Django", 4rem, -110%, 3rem, true);
+      }
+
+      .bootstrap {
+        @include tooltip("Bootstrap", 4.5rem, -95%, 3rem, true);
+      }
+
+      img {
+        height: 2.5rem;
+        max-width: 5rem;
+        padding: 0 1rem;
+        transition: all 0.3s;
+        margin-bottom: 2rem;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .blurb {
+      margin-bottom: 2rem;
+    }
+
+    .buttons {
+      margin: 1rem auto;
+    }
+
+    .btn {
+      margin: 0.5rem 1rem;
+      padding: 0.75rem 1.75rem;
+    }
+  }
+
+  // Project Grid
+
+  .spacing {
+    height: 5rem;
+
+    &--border {
+      border-right: $border-width solid $color-border;
+      @include respond(laptop-small) {
+        border-right: none;
+      }
+    }
+
+    @include respond(phone-large) {
+      height: 1rem;
+    }
+  }
+
+  .details {
+    padding: 1rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    &--1 {
+      grid-column: 2 / 3;
+
+      @include respond(laptop-small) {
+        grid-column: 1 / 2;
+      }
+    }
+
+    &--2 {
+      grid-column: 1 / 2;
+      margin-left: auto;
+      text-align: right;
+    }
+
+    &--3 {
+      grid-column: 2 / 3;
+
+      @include respond(laptop-small) {
+        grid-column: 1 / 2;
+      }
+    }
+  }
+}
