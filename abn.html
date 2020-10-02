@@ -21,10 +21,10 @@
             </ul>
             <p class="blurb">Application that analyses a spreadsheet for valid Australian Business Numbers (ABNs).</p>
             <span>SAMPLE SPREADSHEET TO TEST</span>
-            <div class="demo_details"><a href=""><img src="/assets/svg/file_download.svg" alt="excel"> Click to download</a></div>    
+            <div class="demo_details"><a href="/assets/samples/Sample ABN Data Dump.xlsx"><img src="/assets/svg/file_download.svg" alt="excel"> Click to download</a></div>    
             <div class="buttons">
                 <a href="#" class="btn btn--pink">Live Site</a>
-                <a href="#" class="btn btn--pink">View Code</a>
+                <a href="https://github.com/Tomology/abn_validator" target="_blank" class="btn btn--pink">View Code</a>
             </div>
         </div>
         <div class="spacing spacing--border">&nbsp;</div>
@@ -33,17 +33,17 @@
         <div class="gif gif-abn--1"></div>
         <div class="details details--1">
             <h3>Background</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut ipsum consequuntur incidunt dolorum ducimus quia accusamus, rem nobis impedit totam, quasi delectus fugit ex repellat autem tempora eaque? Debitis, beatae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, magni, consequatur eius impedit id vitae, maiores soluta corporis nostrum placeat atque accusantium cumque fugit eos distinctio repudiandae! Odit, tenetur pariatur.</p>
+            <p>In my prior role as an auditor, as part of our risk assessment process, we would request a data dump of suppliers and customers from our client’s database. We would then verify whether the Australian Business Number (ABN) listed for each supplier / customer was valid. While our in-house data analytics scripts were still being written, it was at each auditor’s discretion in how they accomplished this. I created a Python algorithm to automate this process. Since then, I’ve added a web interface and have added an API call to the Australian Business Register to also obtain the entity name and business name(s) associated with the ABN.</p>
         </div>
         <div class="gif gif-abn--2"></div>
         <div class="details details--2">
             <h3>Features</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut ipsum consequuntur incidunt dolorum ducimus quia accusamus, rem nobis impedit totam, quasi delectus fugit ex repellat autem tempora eaque? Debitis, beatae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, magni, consequatur eius impedit id vitae, maiores soluta corporis nostrum placeat atque accusantium cumque fugit eos distinctio repudiandae! Odit, tenetur pariatur.</p>
+            <p>ABN Validator allows users to upload a spreadsheet containing ABNs. My algorithm will then scan through each ABN and check whether the ABN is valid. If valid, a call will be made to the Australian Business Register API to obtain the entity name and business name(s) for that ABN. The user will be redirected to a page containing a downloadable file. This file will be an updated spreadsheet with extra columns / rows containing the results.</p>
         </div>
         <div class="gif gif-abn--3"></div>
         <div class="details details--3">
-            <h3>Challenges</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut ipsum consequuntur incidunt dolorum ducimus quia accusamus, rem nobis impedit totam, quasi delectus fugit ex repellat autem tempora eaque? Debitis, beatae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, magni, consequatur eius impedit id vitae, maiores soluta corporis nostrum placeat atque accusantium cumque fugit eos distinctio repudiandae! Odit, tenetur pariatur.</p>
+            <h3>Technology Highlights</h3>
+            <p>Since I was going to be working with data dumps, I needed to choose a library with fast spreadsheet read and update abilities. I chose Python’s pandas data analytics library for its easy to use structures and high performance. As I had written my algorithm in Python, I decided to keep going down the Python route and round out my application with Python’s Django Framework. Django’s built-in templating was the perfect tool for passing my Python-written back end data to be rendered on the client side. </p>
         </div>
     </section> 
 </main>

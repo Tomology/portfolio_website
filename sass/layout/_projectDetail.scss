@@ -191,6 +191,14 @@
       margin-bottom: 0.5rem;
     }
 
+    p {
+      line-height: 1.5;
+
+      @include respond(laptop-medium) {
+        line-height: 1.2;
+      }
+    }
+
     &--1 {
       grid-column: 2 / 3;
 

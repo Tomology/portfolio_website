@@ -76,8 +76,15 @@
         background-color: $color-white;
 
         &--construction {
-          background-color: #ff6883;
-          position: relative;
+          background-color: $color-white;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          img {
+            width: 100%;
+          }
         }
       }
 
@@ -110,7 +117,11 @@
         }
 
         &-3 {
-          background-color: #ff6883;
+          background-image: linear-gradient(
+            to right bottom,
+            $accent2,
+            $accent5
+          );
         }
       }
     }
@@ -128,11 +139,6 @@
       height: 15rem;
 
       &--1 {
-        // background-image: linear-gradient(
-        //   to right bottom,
-        //   rgba(#885c5d, 0.65),
-        //   rgba(#50575d, 0.65)
-        // );
         background-color: $highlight;
 
         &::before {
@@ -161,11 +167,7 @@
       }
 
       &--2 {
-        background-image: linear-gradient(
-          to right bottom,
-          rgba($color-grey-light, 0.65),
-          rgba($color-grey-dark, 0.65)
-        );
+        background-color: $accent2;
 
         &::before {
           content: "";
@@ -191,12 +193,6 @@
           }
         }
       }
-
-      &--3 {
-        background-image: url(/assets/gifs/construction.gif);
-        transform: translateY(40%);
-        height: 20rem;
-      }
     }
 
     &__heading {
@@ -207,9 +203,14 @@
       color: $color-white;
       position: absolute;
       margin: 0 auto;
-      transform: translateX(20%);
       top: 5rem;
       width: 75%;
+      transform: translateX(20%);
+
+      &--construction {
+        transform: translateX(0%);
+        width: 50%;
+      }
 
       &-span {
         padding: 0rem 0.5rem;
@@ -227,17 +228,18 @@
         &--2 {
           background-image: linear-gradient(
             to right bottom,
-            rgba($color-grey-light, 0.85),
-            rgba($color-grey-dark, 0.85)
+            rgba($accent2, 1),
+            rgba($blue-gradient-light, 1)
           );
         }
 
         &--3 {
           background-image: linear-gradient(
             to right bottom,
-            rgba($color-grey-light, 0.85),
-            rgba($color-grey-dark, 0.85)
+            rgba($accent3, 1),
+            rgba($accent4, 1)
           );
+          margin-right: 5rem;
         }
       }
     }
