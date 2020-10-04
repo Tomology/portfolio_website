@@ -117,11 +117,7 @@
         }
 
         &-3 {
-          background-image: linear-gradient(
-            to right bottom,
-            $accent2,
-            $accent5
-          );
+          background-color: $color-border;
         }
       }
     }
@@ -208,8 +204,12 @@
       transform: translateX(20%);
 
       &--construction {
-        transform: translateX(0%);
+        transform: translateX(-5%);
         width: 50%;
+
+        @include respond(laptop-small) {
+          transform: translateX(-30%);
+        }
       }
 
       &-span {
@@ -234,11 +234,12 @@
         }
 
         &--3 {
-          background-image: linear-gradient(
-            to right bottom,
-            rgba($accent3, 1),
-            rgba($accent4, 1)
-          );
+          // background-image: linear-gradient(
+          //   to right bottom,
+          //   rgba($accent3, 1),
+          //   rgba($accent4, 1)
+          // );
+          background-color: $color-border;
           margin-right: 5rem;
         }
       }
