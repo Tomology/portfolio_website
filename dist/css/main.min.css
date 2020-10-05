@@ -865,6 +865,7 @@ body::-webkit-scrollbar-thumb {
 }
 #projects .project__heading-span {
   padding: 0rem 0.5rem;
+  -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
 #projects .project__heading-span--1 {
