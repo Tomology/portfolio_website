@@ -4,11 +4,5 @@
   width: 100vw;
   max-width: 100%;
   overflow: hidden;
-
-  .right_arrow {
-    position: absolute;
-    right: 0;
-    z-index: 10000;
-    font-size: 2rem;
-  }
+  background-color: $color-border;
 }
