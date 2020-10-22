@@ -71,7 +71,7 @@ nav {
   font-family: Nintendoid1;
   color: #eee;
   line-height: 1;
-  text-shadow: 0.06rem 0 0.06rem $accent1, -0.125rem 0 0.06rem $accent2;
+  text-shadow: 0.06rem 0 0.06rem $accent1, -0.125rem 0.2rem 0.06rem $accent2;
   letter-spacing: 0.125em;
   animation-duration: 0.01s;
   animation-name: textflicker;
@@ -87,11 +87,11 @@ nav {
   }
 }
 
-@keyframes textflicker {
-  from {
-    text-shadow: 1px 0 0 $accent1, -2px 0 0 $accent2;
-  }
-  to {
-    text-shadow: 2px 0.5px 2px $accent1, -1px -0.5px 2px $accent2;
-  }
-}
+// @keyframes textflicker {
+//   from {
+//     text-shadow: 1px 0 0 $accent1, -2px 0 0 $accent2;
+//   }
+//   to {
+//     text-shadow: 2px 0.5px 2px $accent1, -1px -0.5px 2px $accent2;
+//   }
+// }

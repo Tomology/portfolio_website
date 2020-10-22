@@ -333,7 +333,7 @@ nav ul li:hover a {
   font-family: Nintendoid1;
   color: #eee;
   line-height: 1;
-  text-shadow: 0.06rem 0 0.06rem #ffa596, -0.125rem 0 0.06rem #00e4ff;
+  text-shadow: 0.06rem 0 0.06rem #ffa596, -0.125rem 0.2rem 0.06rem #00e4ff;
   letter-spacing: 0.125em;
   animation-duration: 0.01s;
   animation-name: textflicker;
@@ -348,14 +348,6 @@ nav ul li:hover a {
 @media (max-width: 32.19em) {
   .flicker {
     font-size: 0.65rem;
-  }
-}
-@keyframes textflicker {
-  from {
-    text-shadow: 1px 0 0 #ffa596, -2px 0 0 #00e4ff;
-  }
-  to {
-    text-shadow: 2px 0.5px 2px #ffa596, -1px -0.5px 2px #00e4ff;
   }
 }
 body::-webkit-scrollbar {
@@ -865,7 +857,6 @@ body::-webkit-scrollbar-thumb {
 }
 #projects .project__heading-span {
   padding: 0rem 0.5rem;
-  -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
 #projects .project__heading-span--1 {
