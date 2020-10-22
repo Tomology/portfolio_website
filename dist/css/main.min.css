@@ -333,12 +333,9 @@ nav ul li:hover a {
   font-family: Nintendoid1;
   color: #eee;
   line-height: 1;
-  text-shadow: 0.06rem 0 0.06rem #ffa596, -0.125rem 0.2rem 0.06rem #00e4ff;
-  letter-spacing: 0.125em;
-  animation-duration: 0.01s;
-  animation-name: textflicker;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+  text-shadow: 0.06rem 0 0.06rem 0.5rem #ffa596,
+    -0.125rem 0.2rem 1.06rem #00e4ff;
+  letter-spacing: 0.25em;
 }
 @media (max-width: 44.38em) {
   .flicker {

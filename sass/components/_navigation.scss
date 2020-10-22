@@ -71,12 +71,13 @@ nav {
   font-family: Nintendoid1;
   color: #eee;
   line-height: 1;
-  text-shadow: 0.06rem 0 0.06rem $accent1, -0.125rem 0.2rem 0.06rem $accent2;
-  letter-spacing: 0.125em;
-  animation-duration: 0.01s;
-  animation-name: textflicker;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+  text-shadow: 0.06rem 0 0.06rem 0.5rem $accent1,
+    -0.125rem 0.2rem 1.06rem $accent2;
+  letter-spacing: 0.25em;
+  // animation-duration: 0.01s;
+  // animation-name: textflicker;
+  // animation-iteration-count: infinite;
+  // animation-direction: alternate;
 
   @include respond(tab-port) {
     font-size: 1rem;
